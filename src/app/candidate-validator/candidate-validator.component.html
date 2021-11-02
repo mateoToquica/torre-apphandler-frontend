@@ -1,0 +1,25 @@
+
+<div class="container col-md-3">
+    <div class="abs-center">
+        <form class="form-horizontal">
+            <div class="form-group col-md-12">
+                <label for="candidate_name">Candidate full name:</label>
+                <input type="text" class="form-control" [(ngModel)]="candidate.name" id="candidate_name"
+                    name="candidate_name"> <br>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="work_experience">Work experience:</label>
+                <input type="range" class="form-control" id="work_experience" [(ngModel)]="candidate.work_experience"
+                    name="work_experience" min="0" max="10"> {{candidate.work_experience}} Years <br><br>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="titles">Number Achievements:</label>
+                <input type="number" class="form-control" id="titles"
+                    [(ngModel)]="candidate.titles" name="titles"> <br><br>
+            </div>
+            <div class="col-md-12">
+                <input (click)="probarValidate()" class="btn btn-success" value="Validate">
+            </div>
+        </form>
+    </div>
+</div>
